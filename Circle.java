@@ -1,47 +1,71 @@
 import java.awt.Color;
 
 /**
- * This class describes a circle with a given radius and color.
- *
- * @author nanajjar
- * @version Spring 25
+ * This class's purpose is to provide a circle class that allows for creation and information gathering of circles.
+ * 
+ * @author Nikita Desyatnikov
  */
 
 public class Circle {  
-    // private instance variable, not accessible from outside this class
+    /**
+     * Initialize private instance variables
+     */ 
     private double radius;
     private Color color;
     private double area;
 
-    // The default constructor with no argument.
-    // It sets the radius and color to their default value.
+    /**
+     * Constructor: construct circle with default parameters
+     * @param NONE
+     * @return NONE
+     */
     public Circle() {
         radius = 1.0;
         this.color = new Color(255,119,65);
     }
 
-    // 2nd constructor with given radius and color
+    /**
+     * Constructor: construct cricle with given parameters of radius, color
+     * @param double RADIUS, color COLOR
+     * @return NONE
+     */
     public Circle(double r, Color clr) {
         radius = r;
         color = clr;
     }
 
-    // A public method for retrieving the radius
+    /**
+     * Method: get radius
+     * @param NONE
+     * @return double RADIUS
+     */
     public double getRadius() {
         return radius;
     }
 
-    // A public method for retrieving the color of circle
+    /**
+     * Method: get COLOR
+     * @param NONE
+     * @return Color COLOR
+    */
     public Color getColor() {
         return color;
     }
 
-    // A public method for retrieving the area of circle
+    /**
+     * Method: Get Area, references calculateArea
+     * @param NONE
+     * @return double AREA
+     */
     public double getArea() {
         calculateArea();
         return area;
     }
-    // A private method for computing the area of circle
+    /**
+     * Method: calculate area
+     * @param NONE
+     * @return void
+     */
     private void calculateArea() {
         area = radius * radius * Math.PI;
     }
